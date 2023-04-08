@@ -1,0 +1,275 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+html {
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  width: 100%;
+  height: 100%;
+  margin: auto;
+  overflow-y: hidden;
+}
+
+h1, h2, h3, h4, h5, p {
+  margin: 0;
+}
+
+button {
+  font-family: 'Poppins', sans-serif;
+}
+
+#content {
+  height: 100%;
+  width: 100%;
+}
+
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  margin: auto;
+  padding: 50px 50px 0 50px;
+  z-index: 2;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  margin: auto;
+}
+
+.gallery {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-self: center;
+  width: 100%;
+  min-height: 100%;
+  overflow: hidden;
+}
+
+.gallery-div {
+  position: absolute;
+  width: 50%;
+  height: 600px;
+  text-align: center;
+  top: 100px;
+  left: 50%;
+  margin-left: -25%;
+}
+
+#logo-div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+#home-logo {
+  height: 175px;
+}
+
+#slogan {
+  margin: 0;
+  color: white;
+  font-size: 32px;
+  font-weight: 300;
+}
+
+.line-through {
+  text-decoration: line-through;
+  text-decoration-thickness: 2px;
+}
+
+.underline {
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 2px;
+}
+
+.bold {
+  font-weight: 600;
+}
+
+#michelin-div{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  left: 150%;
+  gap: 20px;
+}
+
+#stars {
+  width: 65%;
+}
+
+#stars-text {
+  color: white;
+  font-size: 24px;
+  font-style: italic;
+  font-weight: 300px;
+  margin: 0;
+  width: 75%;
+}
+
+#review-div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  left: -150%;
+  gap: 20px;
+}
+
+#review {
+  color: white;
+  margin: 0;
+  font-style: italic;
+  font-size: 42px;
+  font-weight: 300;
+}
+
+#review-name {
+  color: white;
+  margin: 0;
+  font-style: italic;
+  font-size: 32px;
+  font-weight: 400;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  order: 2;
+}
+
+.nav-btn {
+  color: white;
+  font-size: 28px;
+  font-weight: 300;
+  border: 2px solid white;
+  background: none;
+  padding: 5px 20px;
+  transition: 500ms;
+}
+
+.nav-btn:hover {
+  cursor: pointer;
+  background-color: white;
+  color: black;
+}
+
+.nav-btn.active {
+  background-color: white;
+  color: black;
+}
+
+/* MENU */
+
+.curve-bg {
+  height: 100%;
+  width: 100%;
+  z-index: 1;
+}
+
+.curve-bg-img {
+  position: absolute;
+  right: 32.5%;
+}
+
+.food-div {
+  position: absolute;
+  right: 0;
+  width: fit-content;
+  z-index: 0;
+}
+
+#corner-logo {
+  height: 115px;
+  fill: black;
+  order: 1;
+  cursor: pointer;
+}
+
+#menu-div {
+  position: absolute;
+  left: 75px;
+  top: 250px;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  z-index: 2;
+  gap: 80px;
+}
+
+#menu-select {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+}
+
+#menu-items {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.selection {
+  width: 260px;
+  font-size: 28px;
+  font-weight: 300;
+  border: 3px solid black;
+  background: none;
+  padding: 5px 0 5px 0;
+  transition: 500ms;
+  color: black;
+}
+
+.selection:hover {
+  background-color: black;
+  color: white;
+  cursor: pointer;
+}
+
+.selection.active {
+  background-color: black;
+  color: white;
+}
+
+.item {
+  display: flex;
+  flex-direction: column;
+  width: 450px;
+}
+
+.item-name {
+  font-size: 28px;
+  font-weight: 300;
+  color: black;
+}
+
+.item-desc {
+  font-size: 18px;
+  font-weight: 200;
+  font-style: italic;
+  color: black;
+}
