@@ -11,6 +11,7 @@ function createHeader() {
     const menuBtn = document.createElement('button');
     menuBtn.textContent = 'menu';
     menuBtn.classList.add('nav-btn');
+    menuBtn.id = 'menu-btn';
     menuBtn.addEventListener('click', () => {
       if (!menuBtn.classList.contains('active')) {
         loadMenu();
@@ -21,6 +22,7 @@ function createHeader() {
     const contactBtn = document.createElement('button');
     contactBtn.textContent = 'contact';
     contactBtn.classList.add('nav-btn');
+    contactBtn.id = 'contact-btn';
     contactBtn.addEventListener('click', () => {
       if (!contactBtn.classList.contains('active')) {
         loadContact();

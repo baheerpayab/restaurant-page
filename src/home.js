@@ -14,6 +14,11 @@ function setNav() {
     const cornerLogo = document.getElementById('corner-logo');
     cornerLogo.remove();
   }
+
+  const menuBtn = document.getElementById('menu-btn');
+  const contactBtn = document.getElementById('contact-btn');
+  menuBtn.classList.remove('active');
+  contactBtn.classList.remove('active');
 }
 
 function createGallery() {
