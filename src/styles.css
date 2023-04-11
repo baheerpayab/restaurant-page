@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
+* {
+  box-sizing: border-box;
+}
+
 html {
   height: 100%;
   width: 100%;
@@ -189,16 +193,23 @@ nav {
 
 .curve-bg-img {
   position: absolute;
-  right: 32.5%;
+  left: -55%;
 }
 
-#item-img-div {
+.background-img-div {
   position: absolute;
   right: 0;
   width: 75%;
   height: 125%;
   z-index: 0;
   overflow: hidden;
+}
+
+.background-img {
+  opacity: 100%;
+  transition: 500ms;
+  animation: fade-in 500ms ease-in-out;
+  max-height: 100%;
 }
 
 #corner-logo {
@@ -277,16 +288,93 @@ nav {
   color: black;
 }
 
-.item-img {
-  opacity: 100%;
-  transition: 500ms;
-  animation: fade-in 500ms ease-in-out;
-  max-height: 100%;
-}
-
 .hidden {
   display: none;
 }
+
+/* CONTACT PAGE */
+
+#contact-img {
+  position: absolute;
+  right: 0;
+}
+
+#info-parent-div {
+  position: absolute;
+  left: 75px;
+  top: 250px;
+
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: fit-content;
+
+  width: 750px;
+  height: 450px;
+}
+
+#info-div {
+  
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-end;
+  z-index: 2;
+
+}
+
+.info-sub-div {
+  display: flex;
+  flex-direction: column;
+
+  height: 50px;
+  width: 650px;
+  overflow: hidden;
+
+  transition: height 500ms ease-in-out;
+  padding-bottom: 20px;
+}
+
+.info-sub-div:hover {
+  height: 250px;
+}
+
+.info-sub-div.active {
+  height: 250px;
+}
+
+.contact-heading {
+  border: 2px solid black;
+  padding-left: 20px;
+  
+  font-size: 28px;
+  font-weight: 300;
+}
+
+.info-sub-div.active .contact-heading {
+  background-color: black; 
+  color: white;
+}
+
+.info-sub-div:hover .contact-heading { 
+  background-color: black; 
+  color: white;
+}
+
+.contact-text {
+  font-size: 24px;
+  font-weight: 200;
+  font-style: italic;
+  white-space: pre-line;
+
+  padding: 20px 0px 0px 20px;
+}
+
+#support-email:hover {
+  cursor: pointer;
+}
+
+/* KEYFRAMES */
 
 @keyframes fade-in {
   0% {

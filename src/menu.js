@@ -1,5 +1,4 @@
 import curveBg from './assets/curve-bg.svg';
-import sampleFood from './assets/sample-food.png';
 import logoBlackSvg from './assets/logo-black.svg';
 import loadHome from './home';
 
@@ -36,7 +35,8 @@ const setBackground = () => {
   curveImg.classList.add('curve-bg-img');
 
   const itemImgDiv = document.createElement('div');
-  itemImgDiv.id = ('item-img-div');
+  itemImgDiv.id = 'item-img-div';
+  itemImgDiv.classList.add('background-img-div');
 
   curveDiv.appendChild(curveImg);
   main.appendChild(curveDiv);
@@ -47,13 +47,18 @@ const setNav = () => {
   const header = document.getElementById('header');
   header.style.justifyContent = 'space-between';
 
-  const logo = document.createElement('img');
-  logo.src = logoBlackSvg;
-  logo.id = 'corner-logo';
+  if (!document.getElementById('corner-logo')) {
+    const logo = document.createElement('img');
+    logo.src = logoBlackSvg;
+    logo.id = 'corner-logo';
 
-  logo.addEventListener('click', loadHome);
+    logo.addEventListener('click', loadHome);
 
-  header.appendChild(logo);
+    header.appendChild(logo);
+  }
+
+  const contactBtn = document.getElementById('contact-btn');
+  contactBtn.classList.remove('active');
 };
 
 const createMenu = () => {
@@ -82,7 +87,7 @@ const createMenu = () => {
         itemDesc.id = `item-desc-${i}`;
 
         const itemImg = document.createElement('img');
-        itemImg.classList.add('item-img');
+        itemImg.classList.add('background-img');
         itemImg.id = `item-img-${i}`;
         if (i !== 1) itemImg.classList.add('hidden');
 

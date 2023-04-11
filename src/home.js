@@ -90,6 +90,28 @@ function createGallery() {
   return gallery;
 }
 
+const enableSlides = () => {
+  const gallery = document.getElementById('gallery');
+  const galleryDivs = Array.from(document.getElementsByClassName('gallery-div'));
+  setInterval(() => {
+    galleryDivs.forEach((x) => {
+      if (x.offsetLeft < 0) {
+        x.animate({
+          left: '150%',
+        }, { duration: 0, fill: 'forwards' });
+      } else if (x.offsetLeft > gallery.offsetWidth) {
+        x.animate({
+          left: '50%',
+        }, { duration: 1000, fill: 'forwards', easing: 'ease-in-out' });
+      } else {
+        x.animate({
+          left: '-150%',
+        }, { duration: 1000, fill: 'forwards', easing: 'ease-in-out' });
+      }
+    });
+  }, 4000);
+};
+
 function loadHome() {
   const main = document.getElementById('main');
   main.innerHTML = '';
@@ -98,29 +120,6 @@ function loadHome() {
   setNav();
 
   main.appendChild(createGallery());
-
-  const enableSlides = () => {
-    const gallery = document.getElementById('gallery');
-    const galleryDivs = Array.from(document.getElementsByClassName('gallery-div'));
-    setInterval(() => {
-      galleryDivs.forEach((x) => {
-        if (x.offsetLeft < 0) {
-          x.animate({
-            left: '150%',
-          }, { duration: 0, fill: 'forwards' });
-        } else if (x.offsetLeft > gallery.offsetWidth) {
-          x.animate({
-            left: '50%',
-          }, { duration: 1000, fill: 'forwards', easing: 'ease-in-out' });
-        } else {
-          x.animate({
-            left: '-150%',
-          }, { duration: 1000, fill: 'forwards', easing: 'ease-in-out' });
-        }
-      });
-    }, 4000);
-  };
-
   enableSlides();
 }
 
