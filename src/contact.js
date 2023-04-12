@@ -79,6 +79,7 @@ const createInfo = () => {
   const createBookingDiv = () => {
     const div = document.createElement('div');
     div.classList.add('info-sub-div');
+    div.id = 'booking-div';
 
     const heading = document.createElement('div');
     heading.classList.add('contact-heading');
@@ -87,7 +88,7 @@ const createInfo = () => {
     const text = document.createElement('p');
     text.classList.add('contact-text');
     text.id = 'booking-div';
-    text.textContent = '“refined”\r\n3212 4th av.\r\nNew York City, NY\r\n212 332 2333';
+    text.innerHTML = 'To book a reservation, please either call us\r\n<span class="bold">212 332 2333</span>\r\n or click <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ&ab_channel=RickAstley" target=”_blank”><span class="bold">here</span></a> to book online.';
 
     div.appendChild(heading);
     div.appendChild(text);
@@ -117,18 +118,55 @@ const createInfo = () => {
   const createReviewDiv = () => {
     const div = document.createElement('div');
     div.classList.add('info-sub-div');
+    div.id = 'review-div';
 
     const heading = document.createElement('div');
     heading.classList.add('contact-heading');
     heading.textContent = 'Review';
 
-    const text = document.createElement('p');
-    text.classList.add('contact-text');
-    text.id = 'review-div';
-    text.textContent = '“refined”\r\n3212 4th av.\r\nNew York City, NY\r\n212 332 2333';
+    const form = document.createElement('form');
+    form.id = 'review-form';
+
+    const firstName = document.createElement('input');
+    firstName.type = 'text';
+    firstName.required = true;
+    firstName.placeholder = 'First Name';
+
+    const lastName = document.createElement('input');
+    lastName.type = 'text';
+    lastName.required = true;
+    lastName.placeholder = 'Last Name';
+
+    const dateLabel = document.createElement('label');
+    dateLabel.textContent = 'Visit Date';
+
+    const date = document.createElement('input');
+    date.type = 'date';
+    date.required = true;
+    date.placeholder = 'Date of Visit';
+
+    const receipt = document.createElement('input');
+    receipt.type = 'text';
+    receipt.required = true;
+    receipt.placeholder = 'Receipt Number e.g. #34D73c';
+
+    const textArea = document.createElement('textarea');
+    textArea.required = true;
+    textArea.placeholder = 'Write your review here...';
+
+    const submitBtn = document.createElement('button');
+    submitBtn.type = 'submit';
+    submitBtn.textContent = 'Submit';
+
+    form.appendChild(firstName);
+    form.appendChild(lastName);
+    form.appendChild(date);
+    form.appendChild(receipt);
+    form.appendChild(textArea);
+    form.appendChild(submitBtn);
 
     div.appendChild(heading);
-    div.appendChild(text);
+    div.appendChild(form);
 
     return div;
   };

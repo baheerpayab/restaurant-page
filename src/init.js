@@ -53,6 +53,17 @@ function createFooter() {
   const footer = document.createElement('footer');
   footer.id = 'footer';
 
+  const link = document.createElement('a');
+  link.href = 'https://github.com/baheerpayab';
+  link.target = '_blank';
+
+  const icon = document.createElement('i');
+  icon.classList.add('fab');
+  icon.classList.add('fa-github');
+
+  link.appendChild(icon);
+  footer.appendChild(link);
+
   return footer;
 }
 

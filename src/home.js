@@ -64,20 +64,20 @@ function createGallery() {
     return div;
   };
 
-  const reviewDiv = () => {
+  const quoteDiv = () => {
     const div = document.createElement('div');
-    div.id = 'review-div';
+    div.id = 'quote-div';
     div.classList.add('gallery-div');
 
-    const review = document.createElement('h2');
-    review.textContent = '"I couldn\'t believe it. It was magic. Out of this world. This experience is mandatory."';
-    review.id = 'review';
+    const quote = document.createElement('h2');
+    quote.textContent = '"I couldn\'t believe it. It was magic. Out of this world. This experience is mandatory."';
+    quote.id = 'quote';
 
     const name = document.createElement('p');
     name.textContent = '- Gordon Ramsey -';
-    name.id = 'review-name';
+    name.id = 'quote-name';
 
-    div.appendChild(review);
+    div.appendChild(quote);
     div.appendChild(name);
 
     return div;
@@ -85,7 +85,7 @@ function createGallery() {
 
   gallery.appendChild(logoDiv());
   gallery.appendChild(michelinDiv());
-  gallery.appendChild(reviewDiv());
+  gallery.appendChild(quoteDiv());
 
   return gallery;
 }

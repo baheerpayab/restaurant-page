@@ -129,7 +129,7 @@ main {
   width: 75%;
 }
 
-#review-div {
+#quote-div {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -138,7 +138,7 @@ main {
   gap: 20px;
 }
 
-#review {
+#quote {
   color: white;
   margin: 0;
   font-style: italic;
@@ -146,7 +146,7 @@ main {
   font-weight: 300;
 }
 
-#review-name {
+#quote-name {
   color: white;
   margin: 0;
   font-style: italic;
@@ -327,7 +327,7 @@ nav {
   display: flex;
   flex-direction: column;
 
-  height: 50px;
+  height: 60px;
   width: 650px;
   overflow: hidden;
 
@@ -370,7 +370,94 @@ nav {
   padding: 20px 0px 0px 20px;
 }
 
+#booking-div:hover {
+  height: 200px
+}
+
+a {
+  color: black;
+}
+
+a:focus {
+  color: grey;
+}
+
 #support-email:hover {
+  cursor: pointer;
+}
+
+#review-div:hover {
+  height: 350px;
+}
+
+#review-form {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: flex-start;
+  row-gap: 20px;
+  column-gap: 5%;
+
+  padding-top: 20px;
+
+  width: 100%;
+  height: 200px;
+}
+
+
+input {
+  font-family: 'Poppins', sans-serif;
+  font-size: 14px;
+
+  width: 45%;
+  height: 3rem;
+  border: 2px solid black;
+  padding-left: 10px;
+
+  outline: none;
+}
+
+textarea {
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;
+
+  width: 95%;
+  border: 2px solid black;
+  background: none;
+
+  padding: 10px;
+}
+
+button[type='submit'] {
+  width: 5rem;
+  height: 3rem;
+  border: 2px solid black;
+  color: black;
+  background: none;
+}
+
+button[type='submit']:hover {
+  background-color: black;
+  color: white;
+  cursor: pointer;
+}
+
+/* FOOTER */
+
+.fa-github {
+  scale: 2;
+  color: white;
+
+  position: absolute;
+  right: 30px;
+  bottom: 30px;
+}
+
+.fa-github:hover {
+  transition: 0.3s;
+  scale: 2.2;
+  rotate: 360deg;
   cursor: pointer;
 }
 
