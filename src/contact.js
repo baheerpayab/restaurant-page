@@ -34,7 +34,6 @@ const setNav = () => {
   if (!document.getElementById('corner-logo')) {
     const header = document.getElementById('header');
     header.style.justifyContent = 'space-between';
-
     const logo = document.createElement('img');
     logo.src = logoBlackSvg;
     logo.id = 'corner-logo';
@@ -43,8 +42,12 @@ const setNav = () => {
 
     header.appendChild(logo);
   }
+
+  const contactBtn = document.getElementById('contact-btn');
   const menuBtn = document.getElementById('menu-btn');
   menuBtn.classList.remove('active');
+  menuBtn.classList.remove('home');
+  contactBtn.classList.remove('home');
 };
 
 const createInfo = () => {
@@ -99,6 +102,7 @@ const createInfo = () => {
   const createInquiriesDiv = () => {
     const div = document.createElement('div');
     div.classList.add('info-sub-div');
+    div.id = 'inquiries-div';
 
     const heading = document.createElement('div');
     heading.classList.add('contact-heading');

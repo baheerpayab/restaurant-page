@@ -57,8 +57,11 @@ const setNav = () => {
     header.appendChild(logo);
   }
 
+  const menuBtn = document.getElementById('menu-btn');
   const contactBtn = document.getElementById('contact-btn');
   contactBtn.classList.remove('active');
+  menuBtn.classList.remove('home');
+  contactBtn.classList.remove('home');
 };
 
 const createMenu = () => {
@@ -71,7 +74,6 @@ const createMenu = () => {
     const createItems = () => {
       const div = document.createElement('div');
       div.id = 'menu-items';
-      console.log(div);
 
       for (let i = 1; i <= 4; i += 1) {
         const item = document.createElement('div');

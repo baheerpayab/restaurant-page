@@ -19,6 +19,8 @@ function setNav() {
   const contactBtn = document.getElementById('contact-btn');
   menuBtn.classList.remove('active');
   contactBtn.classList.remove('active');
+  menuBtn.classList.add('home');
+  contactBtn.classList.add('home');
 }
 
 function createGallery() {
