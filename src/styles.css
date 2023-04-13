@@ -452,6 +452,7 @@ button[type='submit']:hover {
   position: absolute;
   right: 30px;
   bottom: 30px;
+  z-index: 3;
 }
 
 .fa-github:hover {
