@@ -1,8 +1,8 @@
 # Restaurant Page - "refined"
 
 <p float="left" align="center">
-  <img src="/readme-images/home-page.gif" width="600" alt="project home-page image">
-  <img src="/readme-images/menu-page.png" width="600" alt="project menu-page image">
+  <img src="src/assets/readme-images/home-page.gif" width="600" alt="project home-page image">
+  <img src="src/assets/readme-images/menu-page.png" width="600" alt="project menu-page image">
 </p>
 <h3 align="center">
 <a href="https://baheerpayab.github.io/restaurant-page/">Live Demo</a>
