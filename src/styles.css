@@ -486,13 +486,12 @@ button[type='submit']:hover {
 
 /* MEDIA QUERIES */
 
-@media (max-width: 1080px) {
+@media (max-width: 1200px) {
+
   .curve-bg-img {
     left: -55%;
   }
-}
 
-@media (max-width: 1200px) {
   .nav-btn {
     color: black;
     border: 2px solid black;
