@@ -2,7 +2,7 @@ import curveBg from './assets/curve-bg.svg';
 import logoBlackSvg from './assets/logo-black.svg';
 import loadHome from './home';
 
-import contactBg from './assets/contact-bg.png';
+import contactBg from './assets/contact-bg.jpg';
 
 const setBackground = () => {
   document.body.style.background = '';

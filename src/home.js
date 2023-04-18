@@ -1,9 +1,10 @@
-import homeBg from './assets/home-bg.png';
+import homeBg from './assets/home-bg.jpg';
 import logoSvg from './assets/logo.svg';
 import starsPng from './assets/michelin-stars.png';
 
 function setBackground() {
   document.body.style.background = `url(${homeBg})`;
+  document.body.style.backgroundSize = 'cover';
 }
 
 function setNav() {

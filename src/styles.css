@@ -193,12 +193,13 @@ nav {
 
 .curve-bg-img {
   position: absolute;
-  left: -55%;
+  left: -850px;
 }
 
 .background-img-div {
   position: absolute;
   right: 0;
+  top: 0;
   width: 75%;
   height: 125%;
   z-index: 0;
@@ -222,7 +223,7 @@ nav {
 #menu-div {
   position: absolute;
   left: 75px;
-  top: 250px;
+  top: 30%;
 
   display: flex;
   flex-direction: row;
@@ -301,7 +302,7 @@ nav {
 #info-parent-div {
   position: absolute;
   left: 75px;
-  top: 250px;
+  top: 30%;
 
   display: flex;
   align-items: center;
@@ -484,6 +485,12 @@ button[type='submit']:hover {
 }
 
 /* MEDIA QUERIES */
+
+@media (max-width: 1080px) {
+  .curve-bg-img {
+    left: -55%;
+  }
+}
 
 @media (max-width: 1200px) {
   .nav-btn {
